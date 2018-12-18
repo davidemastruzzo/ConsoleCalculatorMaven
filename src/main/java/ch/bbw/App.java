@@ -1,7 +1,5 @@
 package ch.bbw;
 
-import sun.java2d.pipe.ValidatePipe;
-
 /**
  * Console Calculator App
  *
