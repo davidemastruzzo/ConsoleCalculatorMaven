@@ -34,4 +34,12 @@ public class CalculatorTest {
 
         assertEquals(difference, 15);
     }
+
+    @Test
+    public void testDivisionTwoPositivesIsOk() {
+
+        int result = calculator.divide(25, 5);
+
+        assertEquals(result, 5);
+    }
 }
