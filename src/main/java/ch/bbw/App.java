@@ -1,13 +1,22 @@
 package ch.bbw;
 
+import sun.java2d.pipe.ValidatePipe;
+
 /**
- * Hello world!
+ * Console Calculator App
  *
+ * @author Davide Mastruzzo
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+public class App {
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+
+        System.out.println("Console Calculator");
+        System.out.println("******************");
+        System.out.println();
+
+        int valueA = 10;
+        int valueB = 20;
+        System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.summe(valueA, valueB));
     }
 }
