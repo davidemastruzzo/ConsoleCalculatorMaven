@@ -20,4 +20,13 @@ public class CalculatorTest {
 
         assertEquals(sum, 35);
     }
+
+    @Test
+    public void testSubtractionTwoPositivesIsOk() {
+        Calculator calculator = new Calculator();
+
+        int difference = calculator.subtraction(25, 10);
+
+        assertEquals(difference, 15);
+    }
 }
