@@ -1,9 +1,9 @@
 package ch.bbw;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
 
 /**
  * Test Class for {@link Calculator}
@@ -12,9 +12,15 @@ import static junit.framework.TestCase.assertTrue;
  */
 public class CalculatorTest {
 
+    private Calculator calculator;
+
+    @Before
+    public void setUp() {
+        calculator = new Calculator();
+    }
+
     @Test
     public void testSumTwoPositivesIsOk() {
-        Calculator calculator = new Calculator();
 
         int sum = calculator.summe(10, 25);
 
@@ -23,7 +29,6 @@ public class CalculatorTest {
 
     @Test
     public void testSubtractionTwoPositivesIsOk() {
-        Calculator calculator = new Calculator();
 
         int difference = calculator.subtraction(25, 10);
 
