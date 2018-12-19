@@ -60,6 +60,14 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSumTwoPositivesEqualIntegerMAX_VALUEIsOk() {
+
+        int sum = calculator.summe(10, Integer.MAX_VALUE - 10);
+
+        assertEquals(sum, Integer.MAX_VALUE);
+    }
+
+    @Test
     public void testSubtractionTwoPositivesIsOk() {
 
         int difference = calculator.subtraction(25, 10);
