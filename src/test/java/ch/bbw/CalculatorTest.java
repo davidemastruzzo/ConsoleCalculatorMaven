@@ -42,6 +42,14 @@ public class CalculatorTest {
 
         assertEquals(sum , -35);
     }
+    
+    @Test
+    public void testSumZeroAndPositive() {
+
+        int sum = calculator.summe(0, 10);
+
+        assertEquals(sum, 10);
+    }
 
     @Test
     public void testSubtractionTwoPositivesIsOk() {
