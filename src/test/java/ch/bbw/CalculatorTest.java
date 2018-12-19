@@ -28,6 +28,62 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSumOnePositiveOneNegativeIsOk() {
+
+        int sum = calculator.summe(-10, 25);
+
+        assertEquals(sum, 15);
+    }
+
+    @Test
+    public void testSumTwoNegativesIsOk() {
+
+        int sum = calculator.summe(-10, -25);
+
+        assertEquals(sum, -35);
+    }
+
+    @Test
+    public void testSumZeroAndPositiveIsOk() {
+
+        int sum = calculator.summe(0, 10);
+
+        assertEquals(sum, 10);
+    }
+
+    @Test
+    public void testSumZeroAndNegativeIsOk() {
+
+        int sum = calculator.summe(0, -10);
+
+        assertEquals(sum, -10);
+    }
+
+    @Test
+    public void testSumTwoZerosIsOk() {
+
+        int sum = calculator.summe(0, 0);
+
+        assertEquals(sum, 0);
+    }
+
+    @Test
+    public void testSumTwoPositivesEqualIntegerMAX_VALUEIsOk() {
+
+        int sum = calculator.summe(10, Integer.MAX_VALUE - 10);
+
+        assertEquals(sum, Integer.MAX_VALUE);
+    }
+
+    @Test
+    public void testSumTwoPositivesGreaterThanIntegerMAX_VALUEIsOk() {
+
+        int sum = calculator.summe(11, Integer.MAX_VALUE - 10);
+
+        assertEquals(sum, Integer.MIN_VALUE);
+    }
+
+    @Test
     public void testSubtractionTwoPositivesIsOk() {
 
         int difference = calculator.subtraction(25, 10);
