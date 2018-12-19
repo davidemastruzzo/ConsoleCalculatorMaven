@@ -92,6 +92,62 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSubtractionPositiveAndNegativeIsOk() {
+
+        int difference = calculator.subtraction(10, -25);
+
+        assertEquals(difference, 35);
+    }
+
+    @Test
+    public void testSubtractionTwoNegativesIsOk() {
+
+        int difference = calculator.subtraction(-10, -25);
+
+        assertEquals(difference, 15);
+    }
+
+    @Test
+    public void testSubtractionZeroAndPositiveIsOk() {
+
+        int difference = calculator.subtraction(0, -10);
+
+        assertEquals(difference, 10);
+    }
+
+    @Test
+    public void testSubtractionZeroAndNegativeIsOk() {
+
+        int difference = calculator.subtraction(0, -10);
+
+        assertEquals(difference, 10);
+    }
+
+    @Test
+    public void testSubtractionTwoZerosIsOk() {
+
+        int difference = calculator.subtraction(0, 0);
+
+        assertEquals(difference, 0);
+    }
+
+    @Test
+    public void testSubtractionTwoPositivesEqualMIN_VALUE() {
+
+        int difference = calculator.subtraction(100, Integer.MIN_VALUE + 100);
+
+        assertEquals(difference, Integer.MIN_VALUE);
+    }
+
+    @Test
+    public void testSubtractionMAX_VALUEAndMIN_VALUEIsOk() {
+
+        int difference = calculator.subtraction(Integer.MAX_VALUE , Integer.MIN_VALUE);
+
+        assertEquals(difference, -1);
+    }
+
+    @Test
     public void testDivisionTwoPositivesIsOk() {
 
         int result = calculator.divide(25, 5);
