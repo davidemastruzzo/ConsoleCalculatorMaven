@@ -108,6 +108,14 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSubtractionZeroAndNegativeIsOk() {
+
+        int difference = calculator.subtraction(0, -10);
+
+        assertEquals(difference, 10);
+    }
+
+    @Test
     public void testDivisionTwoPositivesIsOk() {
 
         int result = calculator.divide(25, 5);
