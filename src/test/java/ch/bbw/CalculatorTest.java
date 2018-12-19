@@ -28,6 +28,14 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSumOnePositiveOneNegativeIsOk() {
+
+        int sum = calculator.summe(-10, 25);
+
+        assertEquals(sum, 15);
+    }
+
+    @Test
     public void testSubtractionTwoPositivesIsOk() {
 
         int difference = calculator.subtraction(25, 10);
