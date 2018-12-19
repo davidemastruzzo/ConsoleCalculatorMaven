@@ -171,6 +171,14 @@ public class CalculatorTest {
         assertEquals(result, 0);
     }
 
+    @Test
+    public void testDivisionZeroAndNegativeIsOk() {
+
+        int result = calculator.divide(0, -25);
+
+        assertEquals(result, 0);
+    }
+
     @Test(expected = ArithmeticException.class)
     public void testDivisionPositiveAndZeroShouldFail() {
 
