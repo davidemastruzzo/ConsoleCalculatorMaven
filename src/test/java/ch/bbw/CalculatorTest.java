@@ -68,6 +68,14 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSumTwoPositivesGreaterThanIntegerMAX_VALUEIsOk() {
+
+        int sum = calculator.summe(11, Integer.MAX_VALUE - 10);
+
+        assertEquals(sum, Integer.MIN_VALUE);
+    }
+
+    @Test
     public void testSubtractionTwoPositivesIsOk() {
 
         int difference = calculator.subtraction(25, 10);
