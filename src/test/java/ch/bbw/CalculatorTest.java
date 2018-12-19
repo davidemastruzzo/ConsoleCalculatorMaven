@@ -154,4 +154,10 @@ public class CalculatorTest {
 
         assertEquals(result, 5);
     }
+
+    @Test(expected = ArithmeticException.class)
+    public void testDivisionPositiveAndZeroShouldFail(){
+
+        int result = calculator.divide(10, 0);
+    }
 }
