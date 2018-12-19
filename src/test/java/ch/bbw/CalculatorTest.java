@@ -92,11 +92,19 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testSubtractionPositiveAndNegativeIsOk(){
-        
+    public void testSubtractionPositiveAndNegativeIsOk() {
+
         int difference = calculator.subtraction(10, -25);
 
         assertEquals(difference, 35);
+    }
+
+    @Test
+    public void testSubtractionTwoNegativesIsOk() {
+
+        int difference = calculator.subtraction(-10, -25);
+
+        assertEquals(difference, 15);
     }
 
     @Test
