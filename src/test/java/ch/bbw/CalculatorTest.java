@@ -116,6 +116,14 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSubtractionTwoZerosIsOk() {
+
+        int difference = calculator.subtraction(0, 0);
+
+        assertEquals(difference, 0);
+    }
+
+    @Test
     public void testDivisionTwoPositivesIsOk() {
 
         int result = calculator.divide(25, 5);
