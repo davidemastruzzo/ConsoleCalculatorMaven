@@ -92,6 +92,14 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSubtractionPositiveAndNegativeIsOk(){
+        
+        int difference = calculator.subtraction(10, -25);
+
+        assertEquals(difference, 35);
+    }
+
+    @Test
     public void testDivisionTwoPositivesIsOk() {
 
         int result = calculator.divide(25, 5);
