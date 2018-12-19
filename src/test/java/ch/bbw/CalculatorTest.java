@@ -132,6 +132,14 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testSubtractionMAX_VALUEAndMIN_VALUEIsOk() {
+
+        int difference = calculator.subtraction(Integer.MAX_VALUE , Integer.MIN_VALUE);
+
+        assertEquals(difference, -1);
+    }
+
+    @Test
     public void testDivisionTwoPositivesIsOk() {
 
         int result = calculator.divide(25, 5);
