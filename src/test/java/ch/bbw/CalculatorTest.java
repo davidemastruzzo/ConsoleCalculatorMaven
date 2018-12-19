@@ -142,7 +142,7 @@ public class CalculatorTest {
     @Test
     public void testSubtractionMAX_VALUEAndMIN_VALUEIsOk() {
 
-        int difference = calculator.subtraction(Integer.MAX_VALUE , Integer.MIN_VALUE);
+        int difference = calculator.subtraction(Integer.MAX_VALUE, Integer.MIN_VALUE);
 
         assertEquals(difference, -1);
     }
@@ -155,8 +155,16 @@ public class CalculatorTest {
         assertEquals(result, 5);
     }
 
+    @Test
+    public void testDivisionPositiveAndNegativeIsOk() {
+
+        int result = calculator.divide(25, -5);
+
+        assertEquals(result, -5);
+    }
+
     @Test(expected = ArithmeticException.class)
-    public void testDivisionPositiveAndZeroShouldFail(){
+    public void testDivisionPositiveAndZeroShouldFail() {
 
         int result = calculator.divide(10, 0);
     }
