@@ -40,15 +40,23 @@ public class CalculatorTest {
 
         int sum = calculator.summe(-10, -25);
 
-        assertEquals(sum , -35);
+        assertEquals(sum, -35);
     }
-    
+
     @Test
-    public void testSumZeroAndPositive() {
+    public void testSumZeroAndPositiveIsOk() {
 
         int sum = calculator.summe(0, 10);
 
         assertEquals(sum, 10);
+    }
+
+    @Test
+    public void testSumZeroAndNegativeIsOk() {
+
+        int sum = calculator.summe(0, -10);
+
+        assertEquals(sum, -10);
     }
 
     @Test
