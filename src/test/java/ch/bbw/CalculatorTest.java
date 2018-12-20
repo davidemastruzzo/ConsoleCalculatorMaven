@@ -192,4 +192,11 @@ public class CalculatorTest {
 
         int result = calculator.divide(10, 0);
     }
+
+    @Test(expected = ArithmeticException.class)
+    public void testDivisionNegativeAndZeroShouldFail() {
+
+        int result = calculator.divide(-10, 0);
+    }
+
 }
