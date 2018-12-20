@@ -110,9 +110,9 @@ public class CalculatorTest {
     @Test
     public void testSubtractionZeroAndPositiveIsOk() {
 
-        int difference = calculator.subtraction(0, -10);
+        int difference = calculator.subtraction(0, 10);
 
-        assertEquals(difference, 10);
+        assertEquals(difference, -10);
     }
 
     @Test
