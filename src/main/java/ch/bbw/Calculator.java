@@ -1,5 +1,9 @@
 package ch.bbw;
 
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * Calculator
  * - kann  zwei Zahlen addieren
@@ -22,5 +26,15 @@ public class Calculator {
 
     private int multiply(int value1, int value2) {
         return value1 * value2;
+    }
+
+    @Test
+    void testMultiplicationTwoPositivesIsOk() {
+
+        Calculator calculator = new Calculator();
+
+        int result = calculator.multiply(10, 5);
+
+        assertEquals(result, 50);
     }
 }
