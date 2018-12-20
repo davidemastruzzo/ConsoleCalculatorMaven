@@ -164,6 +164,14 @@ public class CalculatorTest {
     }
 
     @Test
+    public void testDivisionNegativeAndPositiveIsOk() {
+
+        int result = calculator.divide(-25, 5);
+
+        assertEquals(result, -5);
+    }
+
+    @Test
     public void testDivisionZeroAndPositiveIsOk() {
 
         int result = calculator.divide(0, 25);
