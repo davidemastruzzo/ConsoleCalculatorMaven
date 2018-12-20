@@ -188,6 +188,12 @@ public class CalculatorTest {
     }
 
     @Test(expected = ArithmeticException.class)
+    public void testDivisionZeroAndZeroIsOk() {
+
+        int result = calculator.divide(0, 0);
+    }
+
+    @Test(expected = ArithmeticException.class)
     public void testDivisionPositiveAndZeroShouldFail() {
 
         int result = calculator.divide(10, 0);
@@ -198,5 +204,4 @@ public class CalculatorTest {
 
         int result = calculator.divide(-10, 0);
     }
-
 }
