@@ -28,6 +28,10 @@ public class Calculator {
         return value1 * value2;
     }
 
+
+    /**
+     * The multiply method is private. In order to test it, the tests have to be in the same class.
+     */
     @Test
     void testMultiplicationTwoPositivesIsOk() {
 
