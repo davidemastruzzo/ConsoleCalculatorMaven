@@ -12,8 +12,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class Calculator {
 
-    public int summe(int summand1, int summand2) {
-        return summand1 + summand2;
+    public int sum(int value1, int value2) {
+        return value1 + value2;
     }
 
     protected int subtraction(int value1, int value2) {

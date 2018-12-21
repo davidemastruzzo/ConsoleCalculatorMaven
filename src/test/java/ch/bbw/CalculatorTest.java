@@ -22,7 +22,7 @@ public class CalculatorTest {
     @Test
     public void testSumTwoPositivesIsOk() {
 
-        int sum = calculator.summe(10, 25);
+        int sum = calculator.sum(10, 25);
 
         assertEquals(sum, 35);
     }
@@ -30,7 +30,7 @@ public class CalculatorTest {
     @Test
     public void testSumOnePositiveOneNegativeIsOk() {
 
-        int sum = calculator.summe(-10, 25);
+        int sum = calculator.sum(-10, 25);
 
         assertEquals(sum, 15);
     }
@@ -38,7 +38,7 @@ public class CalculatorTest {
     @Test
     public void testSumTwoNegativesIsOk() {
 
-        int sum = calculator.summe(-10, -25);
+        int sum = calculator.sum(-10, -25);
 
         assertEquals(sum, -35);
     }
@@ -46,7 +46,7 @@ public class CalculatorTest {
     @Test
     public void testSumZeroAndPositiveIsOk() {
 
-        int sum = calculator.summe(0, 10);
+        int sum = calculator.sum(0, 10);
 
         assertEquals(sum, 10);
     }
@@ -54,7 +54,7 @@ public class CalculatorTest {
     @Test
     public void testSumZeroAndNegativeIsOk() {
 
-        int sum = calculator.summe(0, -10);
+        int sum = calculator.sum(0, -10);
 
         assertEquals(sum, -10);
     }
@@ -62,7 +62,7 @@ public class CalculatorTest {
     @Test
     public void testSumTwoZerosIsOk() {
 
-        int sum = calculator.summe(0, 0);
+        int sum = calculator.sum(0, 0);
 
         assertEquals(sum, 0);
     }
@@ -70,7 +70,7 @@ public class CalculatorTest {
     @Test
     public void testSumTwoPositivesEqualIntegerMAX_VALUEIsOk() {
 
-        int sum = calculator.summe(10, Integer.MAX_VALUE - 10);
+        int sum = calculator.sum(10, Integer.MAX_VALUE - 10);
 
         assertEquals(sum, Integer.MAX_VALUE);
     }
@@ -78,7 +78,7 @@ public class CalculatorTest {
     @Test
     public void testSumTwoPositivesGreaterThanIntegerMAX_VALUEIsOk() {
 
-        int sum = calculator.summe(11, Integer.MAX_VALUE - 10);
+        int sum = calculator.sum(11, Integer.MAX_VALUE - 10);
 
         assertEquals(sum, Integer.MIN_VALUE);
     }
