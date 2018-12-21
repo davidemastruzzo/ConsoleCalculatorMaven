@@ -1,3 +1,11 @@
 language: java
 sudo: false
 script: mvn install
+deploy:
+  provider: releases
+  api_key:
+    secure: Lmq5_ZayGSjGAXnoxIrn3A
+  file: "/home/travis/.m2/repository/ch/bbw/02_ConsoleCalculatorWithMaven/1.0-SNAPSHOT/02_ConsoleCalculatorWithMaven-1.0-SNAPSHOT.jar"
+  skip_cleanup: true
+  on:
+    tags: true
